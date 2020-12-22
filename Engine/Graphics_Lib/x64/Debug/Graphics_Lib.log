@@ -1,0 +1,2 @@
+﻿  glad.c
+D:\Local\Engine\Engine\Graphics_Lib\GLAD\src\glad.c(9681,1): fatal error C1010: непредвиденный конец файла во время поиска предкомпилированного заголовка. Возможно, вы забыли добавить директиву "#include "pch.h"" в источник.

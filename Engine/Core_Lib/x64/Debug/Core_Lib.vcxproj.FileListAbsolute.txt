@@ -1,0 +1,2 @@
+D:\Local\Engine\Engine\Builds\Debug\Core_Lib.pdb
+D:\Local\Engine\Engine\Core_Lib\x64\Debug\Core_Lib.pdb

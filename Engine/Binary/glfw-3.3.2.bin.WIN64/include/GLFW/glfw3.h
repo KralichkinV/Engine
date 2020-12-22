@@ -100,12 +100,12 @@ extern "C" {
  * the macOS OpenGL header blocks the definition of ptrdiff_t by glext.h.
  * Include it unconditionally to avoid surprising side-effects.
  */
-#include <stddef.h>
+//#include <stddef.h>
 
 /* Include because it is needed by Vulkan and related functions.
  * Include it unconditionally to avoid surprising side-effects.
  */
-#include <stdint.h>
+//#include <stdint.h>
 
 #if defined(GLFW_INCLUDE_VULKAN)
   #include <vulkan/vulkan.h>
@@ -207,15 +207,17 @@ extern "C" {
 
  #else /*__APPLE__*/
 
-  #include <GL/gl.h>
+  //#include <GL/gl.h>
   #if defined(GLFW_INCLUDE_GLEXT)
    #include <GL/glext.h>
   #endif
   #if defined(GLFW_INCLUDE_GLU)
    #include <GL/glu.h>
   #endif
+//#include <cstdint>
 
  #endif /*__APPLE__*/
+//#include <stdint.h>
 
 #endif /* OpenGL and OpenGL ES headers */
 
@@ -5379,7 +5381,7 @@ GLFWAPI void glfwSetTime(double time);
  *
  *  @ingroup input
  */
-GLFWAPI uint64_t glfwGetTimerValue(void);
+GLFWAPI unsigned long int glfwGetTimerValue(void);
 
 /*! @brief Returns the frequency, in Hz, of the raw timer.
  *
@@ -5399,7 +5401,7 @@ GLFWAPI uint64_t glfwGetTimerValue(void);
  *
  *  @ingroup input
  */
-GLFWAPI uint64_t glfwGetTimerFrequency(void);
+GLFWAPI unsigned long long glfwGetTimerFrequency(void);
 
 /*! @brief Makes the context of the specified window current for the calling
  *  thread.
@@ -5694,7 +5696,7 @@ GLFWAPI int glfwVulkanSupported(void);
  *
  *  @ingroup vulkan
  */
-GLFWAPI const char** glfwGetRequiredInstanceExtensions(uint32_t* count);
+GLFWAPI const char** glfwGetRequiredInstanceExtensions(unsigned long int* count);
 
 #if defined(VK_VERSION_1_0)
 
